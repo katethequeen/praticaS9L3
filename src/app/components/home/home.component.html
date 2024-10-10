@@ -1,1 +1,27 @@
-<p>home works!</p>
+<h2>In Evidenza</h2>
+
+<div class="card my-5" *ngIf="postInEvidenza">
+  <div class="card-body">
+    <h5 class="card-title">{{ postInEvidenza.title }}</h5>
+    <p class="card-text">
+      {{ postInEvidenza.body }}
+    </p>
+    <a href="#" class="btn btn-primary">Vedi Dettagli</a>
+  </div>
+</div>
+
+<h2>Potrebbe Interessarti</h2>
+
+<ng-container *ngFor="let post of arrPosts">
+  <div class="col col-12 col-md-4">
+    <div class="card my-5" *ngIf="postInEvidenza">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">
+          {{ post.body }}
+        </p>
+        <a href="#" class="btn btn-primary">Vedi Dettagli</a>
+      </div>
+    </div>
+  </div>
+</ng-container>
